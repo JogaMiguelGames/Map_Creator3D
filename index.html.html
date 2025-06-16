@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Map Creator 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="panel">
+  <label>
+    Scale X:
+    <input type="number" id="scaleX" step="0.1" min="0.1" value="1" disabled />
+  </label>
+  <label>
+    Scale Y:
+    <input type="number" id="scaleY" step="0.1" min="0.1" value="1" disabled />
+  </label>
+  <label>
+    Scale Z:
+    <input type="number" id="scaleZ" step="0.1" min="0.1" value="1" disabled />
+  </label>
+  <label>
+    Position X:
+    <input type="number" id="posX" step="0.1" value="0" disabled />
+  </label>
+  <label>
+    Position Y:
+    <input type="number" id="posY" step="0.1" value="0.5" disabled />
+  </label>
+  <label>
+    Position Z:
+    <input type="number" id="posZ" step="0.1" value="0" disabled />
+  </label>
+  <label>
+    Rotação X: 
+    <input type="number" id="rotX" step="0.1">
+  </label>
+  <label>
+    Rotação Y: 
+    <input type="number" id="rotY" step="0.1">
+  </label>
+  <label>
+    Rotação Z: 
+    <input type="number" id="rotZ" step="0.1">
+  </label>
+
+  <label>
+    Color HEX:
+    <input type="text" id="colorHex" maxlength="7" pattern="#[0-9a-fA-F]{6}" placeholder="#ff0000" disabled />
+  </label>
+
+  <div id="cubeList" style="margin-top: 15px; border-top: 1px solid #555; padding-top: 10px; max-height: 200px; overflow-y: auto; cursor: pointer; user-select: none; color: white; font-size: 14px;"></div>
+</div>
+
+<div id="commandLine">
+  <input type="text" id="commandInput" placeholder="Digite comando..." autocomplete="off" />
+</div>
+
+<div id="topMenu">
+  <div id="leftButtons">
+    <button id="runButton">
+      <img src="resources/images/ui/buttons/run.png" alt="Run" />
+      <span>Run</span>
+    </button>
+    <button id="stopButton">
+      <img src="resources/images/ui/buttons/stop.png" alt="Stop" />
+      <span>Stop</span>
+    </button>
+    <button id="addCubeBtn">
+      <img src="resources/images/ui/buttons/add_cube.png" alt="Add Cube" />
+      <span>Add Cube</span>
+    </button>
+  </div>
+
+  <div id="rightButtons">
+    <button id="saveButton">
+      <img src="resources/images/ui/save.png" alt="Save" />
+      <span>Save</span>
+    </button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="main.js"></script>
+<script src="console.js"></script>
+<script src="save.js"></script>
+
+</body>
+</html>
